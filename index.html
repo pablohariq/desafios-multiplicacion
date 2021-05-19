@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Multiplicación</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Desafío Multiplicación</h1>
+    <p>Presione el botón para comenzar. Los resultados se mostrarán por la consola.</p>
+    <button type="button" class="btn btn-info btn-lg" onclick="multiplicar()">Comenzar</button>
+</div>
+
+<script>
+    const multiplicar = () => {
+        const input = +prompt("Ingrese un número del 1 al 20")
+        if (input > 20 || input < 1){
+            alert("El número ingresado no es válido")
+            return
+        }
+        else{
+            for (let i = 1; i <= input; i++){
+                console.log(`${i} X ${input} = ${input*i}`)
+            }
+            // calcular factorial
+            for (let i = 1; i <= input; i++){
+                factorial = 1;
+                for (let j = 1; j <= i ; j++){
+                    factorial *= j 
+                }
+                console.log(`El factorial de ${i} es ${factorial}`)
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
